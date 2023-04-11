@@ -2,11 +2,11 @@
  * @Author: duanruilong
  * @Date: 2023-04-11 09:48:58
  * @LastEditors: duanruilong
- * @LastEditTime: 2023-04-11 15:33:07
+ * @LastEditTime: 2023-04-11 16:17:29
  * @Description:
  */
 
-var tList1 = [
+var tList0 = [
   {
     title: ' Your creativity, our protocol, limitless possibilities.',
     info: `<i class="left-border"></i>  Yours Protocol streamlines
@@ -37,27 +37,47 @@ var tList1 = [
   },
 ];
 
-var tList2 = [
+
+var tList1 = [
+  {
+    title: ' Everlasting Stability',
+    info: `<i class="left-border"></i>  Imagine creating something that will lastforever.<br>
+          On-chain protocols offer that kind of new possibility for YOUR AI characters to stand the test of time.
+      `,
+  },
   {
     title:
-      ' With Yours protocol,users can benefit from collective UGl (User Generated Intelligence)',
-    info: `<i class="left-border"></i> Everlasting Stability lmagine creating something that willlast forever. Onchain protocols offer that kind of
-		intelligence,and promotingvigorousdevelopment thatwill stand the testof time.`,
-  },
-  {
-    title: 'Flexibility and Autonomy',
-    info: `<i class="left-border"></i> Total creative freedom and unaltered displayof users' creativityenabling users to connect with personal
-		intelligent beings in ways`,
-  },
-  {
-    title: 'Boundless Potential of Collaboration and Creation',
-    info: `<i class="left-border"></i> a. The first community-built artificial intelligence. THE Al protocol for <br>
-				b.Web3.0 communities.development.<br>
-				c.Build upon others"PromptWorkflows" tocreate larger,higher-quality Albeings, where thepossibilities arelimited only by ourown imagination.`,
+      ' Easy Tailoring',
+    info: `<i class="left-border"></i> Directly chat with others' characters. ORbuild upon their "prompt Workflow" toeasily create characters that fit YOURexact needs`,
   },
 ];
 
+var tList2 = [
+  {
+    title:
+      ' Alone we can do so little, together we can do so much.',
+    info: `<i class="left-border"></i>Join the first community-driven UGI ecosystem today to unlock new possibilities with YOUR AIcharacters.`,
+  },
+ 
+];
+
 $(function () {
+
+
+  // document.getElementById('text_0').innerHTML = tList0[0].title;
+  // document.getElementById('textp_0').innerHTML = tList0[0].info;
+  var position_0 = -1;
+  var changeInterval1_1 = setInterval(function () {
+    if (position_0 + 1 < tList0.length) {
+      position_0 = position_0 += 1;
+    } else {
+      position_0 = 0;
+      clearInterval(changeInterval1_1);
+    }
+    document.getElementById('text_0').innerHTML = tList0[position_0].title;
+    document.getElementById('textp_0').innerHTML = tList0[position_0].info;
+  }, 2000); 
+
   $('.box').fullpage({
     navigation: true,
     navigationTooltips: [''],
@@ -74,19 +94,18 @@ $(function () {
     ],
     afterLoad: function (anchorLink, index) {
       if (index == 1) {
-        console.log('1111111111 :>> ', 1111111111);
         $('.lizhi_center').toggleClass('lizhi_center_show');
         $('.lizhi_center').removeClass('lizhi_center_hide');
         $('.title1').removeClass('active44');
         $('.title1').toggleClass('active4');
-        $('#ticker')
-          .ticker({
-            cursorList: ' ',
-            rate: 20,
-            delay: 1000,
-          })
-          .trigger('play')
-          .trigger('stop');
+        // $('#textp_0')
+        //   .ticker({
+        //     cursorList: ' ',
+        //     rate: 20,
+        //     delay: 1000,
+        //   })
+        //   .trigger('play')
+        //   .trigger('stop');
 
         var video_1 = document.getElementById('video_cent1');
         var vList1 = [
@@ -99,6 +118,21 @@ $(function () {
         video_1.src = vList1_one;
         video_1.load();
         video_1.play();
+
+        // 文字
+        clearInterval(changeInterval1_1);
+        var position = -1;
+        var changeInterval1 = setInterval(function () {
+          if (position + 1 < tList0.length) {
+            position = position += 1;
+          } else {
+            position = 0;
+            clearInterval(changeInterval1);
+          }
+          document.getElementById('text_0').innerHTML = tList0[position].title;
+          document.getElementById('textp_0').innerHTML = tList0[position].info;
+        }, 2000); 
+
       } else if (index == 2) {
         $('.title2').removeClass('active44');
         $('.title2').toggleClass('active4');
@@ -107,27 +141,32 @@ $(function () {
 
         var video_2 = document.getElementById('video_cent2');
         var vList2 = [
-          './video/B001.mkv',
-          './video/B002.mkv',
-          './video/B003.mkv',
+          './video/A001.mkv',
+          './video/A002.mkv',
+          './video/A003.mkv',
         ]; // 初始化播放列表，这里的url要用相对路径
         var vLen = vList2.length;
         var vList2_one = vList2[Math.floor(Math.random() * vList2.length)];
         video_2.src = vList2_one;
         video_2.load();
         video_2.play();
-        document.getElementById('text_1').innerHTML = tList2[0].title;
-        document.getElementById('textp_1').innerHTML = tList2[0].info;
-
+        document.getElementById('text_1').innerHTML = tList1[0].title;
+        document.getElementById('textp_1').innerHTML = tList1[0].info;
+        // $('#textp_1')
+        //   .ticker({
+        //     cursorList: ' ',
+        //     rate: 20,
+        //     delay: 1000,
+        //   })
+        //   .trigger('play')
+        //   .trigger('stop');
         var position = -1;
-        // document.getElementById('text_1').innerHTML = tList1[0].title;
-        // document.getElementById('textp_1').innerHTML = tList1[0].info;
         var changeInterval1 = setInterval(function () {
           if (position + 1 < tList1.length) {
             position = position += 1;
           } else {
             position = 0;
-            // clearInterval(changeInterval1);
+            clearInterval(changeInterval1);
           }
           document.getElementById('text_1').innerHTML = tList1[position].title;
           document.getElementById('textp_1').innerHTML = tList1[position].info;
@@ -142,9 +181,9 @@ $(function () {
 
         var video_3 = document.getElementById('video_cent3');
         var vList3 = [
-          './video/A001.mkv',
-          './video/A002.mkv',
-          './video/A003.mkv',
+          './video/B001.mkv',
+          './video/B002.mkv',
+          './video/B003.mkv',
         ]; // 初始化播放列表，这里的url要用相对路径
         var vLen = vList3.length;
         var vList3_one = vList3[Math.floor(Math.random() * vList3.length)];
@@ -160,11 +199,14 @@ $(function () {
             position2 = position2 += 1;
           } else {
             position2 = 0;
-            // clearInterval(changeInterval1);
+            clearInterval(changeInterval1);
           }
           document.getElementById('text_2').innerHTML = tList2[position2].title;
           document.getElementById('textp_2').innerHTML = tList2[position2].info;
         }, 2000);
+      }else if (index == 4) {
+        $('.back3').removeClass('back3_hide');
+        $('.back3').toggleClass('back3_show');
       }
     },
     onLeave: function (index, nextIndex, direction) {
@@ -173,6 +215,7 @@ $(function () {
         $('.lizhi_center').removeClass('lizhi_center_show');
         $('.title1').removeClass('active4');
         $('.title1').toggleClass('active44');
+         document.getElementById('video_cent1').src='';
         // document.getElementById('text_1').innerHTML = tList1[0].title;
         // document.getElementById('textp_1').innerHTML = tList1[0].info;
       } else if (index == 2) {
@@ -183,12 +226,17 @@ $(function () {
         $('.cent2').toggleClass('active44');
         $('.title2').removeClass('active4');
         $('.title2').toggleClass('active44');
-      } else if (index == 3) {
+         document.getElementById('video_cent2').src='';
+        } else if (index == 3) {
         $('.title_r').removeClass('active_r');
         $('.title_r').toggleClass('active_r1');
         $('.img12').removeClass('active2');
         $('.img12').toggleClass('active22');
         $('.y-ain1').removeClass('active3');
+         document.getElementById('video_cent3').src='';
+        }else if (index == 4) {
+        $('.back3').removeClass('back3_show');
+        $('.back3').toggleClass('back3_hide');
       }
     },
   });

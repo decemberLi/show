@@ -29,9 +29,9 @@ const orbit = new OrbitControls(camera, canvas)
 // to disable zoom
 orbit.enableZoom = false;
 // to disable rotation
-orbit.enableRotate = false;
+orbit.enableRotate = true ;
 // to disable pan
-orbit.enablePan = false;
+orbit.enablePan = true;
 
 // ------------------------ //
 // STAR ALPHA TEXTURE
