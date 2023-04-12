@@ -1,8 +1,8 @@
 /*
  * @Author: duanruilong
  * @Date: 2023-04-11 09:48:58
- * @LastEditors: duanruilong
- * @LastEditTime: 2023-04-11 16:17:29
+ * @LastEditors: Drlong drl1210@163.com
+ * @LastEditTime: 2023-04-12 09:26:15
  * @Description:
  */
 
@@ -109,9 +109,9 @@ $(function () {
 
         var video_1 = document.getElementById('video_cent1');
         var vList1 = [
-          './video/C001.mkv',
-          './video/C002.mkv',
-          './video/C003.mkv',
+          // './video/C001.mp4',
+          './video/C002.mp4',
+          './video/C003.mp4',
         ]; // 初始化播放列表，这里的url要用相对路径
         var vLen = vList1.length;
         var vList1_one = vList1[Math.floor(Math.random() * vList1.length)];
@@ -141,9 +141,9 @@ $(function () {
 
         var video_2 = document.getElementById('video_cent2');
         var vList2 = [
-          './video/A001.mkv',
-          './video/A002.mkv',
-          './video/A003.mkv',
+          './video/A001.mp4',
+          './video/A002.mp4',
+          './video/A003.mp4',
         ]; // 初始化播放列表，这里的url要用相对路径
         var vLen = vList2.length;
         var vList2_one = vList2[Math.floor(Math.random() * vList2.length)];
@@ -181,9 +181,9 @@ $(function () {
 
         var video_3 = document.getElementById('video_cent3');
         var vList3 = [
-          './video/B001.mkv',
-          './video/B002.mkv',
-          './video/B003.mkv',
+          './video/B001.mp4',
+          './video/B002.mp4',
+          './video/B003.mp4',
         ]; // 初始化播放列表，这里的url要用相对路径
         var vLen = vList3.length;
         var vList3_one = vList3[Math.floor(Math.random() * vList3.length)];
