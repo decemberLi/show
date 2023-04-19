@@ -61,7 +61,8 @@ window.scrollReveal = (function (window) {
       enter:   'bottom',
       move:    '24px',
       over:    '0.66s',
-      easing:  'ease-in-out',
+      easing:  'enter',
+      // easing:  'ease-in-out',
       opacity: 0,
       complete: function() {},
 
@@ -359,9 +360,9 @@ window.scrollReveal = (function (window) {
         inner = window['innerHeight'];
 
       if (this.docElem == window.document.documentElement)
-                return (client < inner) ? inner : client;
+                return (client < inner) ? inner-90 : client-90;
             else
-                return client;
+                return client-90;
     },
 
     getOffset : function(el) {

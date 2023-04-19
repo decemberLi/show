@@ -39,7 +39,7 @@ function init () {
 
   material = new THREE.PointsMaterial({
     size: 3,
-    color: 0xffffff,
+    color: 0xfffdff,
   })
 
   const particles = new THREE.Points(geometry, material)
@@ -69,8 +69,8 @@ function onWindowResize () {
 }
 
 function onPointerMove (event) {
-  mouseX = event.clientX - windowHalfX 
-  mouseY = event.clientY - windowHalfY
+  // mouseX = event.clientX - windowHalfX 
+  // mouseY = event.clientY - windowHalfY
 }
 
 function animate () {

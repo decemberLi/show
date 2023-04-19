@@ -1,357 +1,264 @@
-<!doctype html>
+<!--
+ * @Author: Drlong drl1210@163.com
+ * @Date: 2023-04-17 09:34:23
+ * @LastEditors: Drlong drl1210@163.com
+ * @LastEditTime: 2023-04-19 15:14:13
+ * @FilePath: \ai_alld:\web-all\urs-ai\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>URS.AI</title>
-	<link rel="stylesheet" href="css/jquery.fullPage.css">
-	<script src="js/jquery-1.8.3.min.js"></script>
-	<script src="js/jquery.fullPage.js"></script>
-	<script src="js/index.js"></script>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage fixed header and footer." />
+	<meta name="keywords" content="fullpage,jquery,demo,screen,fixed, header,footer, absolute, positioned,css" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<style>
+
+	</style>
+
+
 </head>
 
 <body>
-	<audio autoplay="autoplay" loop="loop" preload="auto" controls="controls"
-		src="./audio/page.mp3">       
+
+	<audio id='click_audio_home' autoplay="autoplay" loop="loop" preload="auto" controls="controls"
+		src="./audio/home.mp3">
 	</audio>
-	<!-- 导航 -->
+	<audio id='click_audio_index' preload="auto" controls="controls" src="./audio/click.wav">
+	</audio>
 	<div id="header">
 		<div class="nav">
-			<a href="" class="mala-logo mala-fl"></a>
-			<div class="mala-fl"></div>
+			<!-- <div>2</div>
+			<div>3</div> -->
+			<a href="#" class="mala-logo mala-fl"></a>
 			<div class="nav-help">
 				<ul class="mala-nav-list mala-clearfix">
 					<li class="mala-nav-item mala-fl">
-						<a href="" class="mala-nav-link">
+						<a href="#" class="mala-nav-link" style="border-color: #fff;">
 							Home</a>
 					</li>
-					<!-- <li class="mala-nav-item mala-fl">
-						<a href="" class="mala-nav-link">
-							Projects</a>
-					</li>
 					<li class="mala-nav-item mala-fl">
-						<a href="" class="mala-nav-link">
-							Tech</a>
+						<a href="about.html" class="mala-nav-link">
+							About US</a>
 					</li>
-					<li class="mala-nav-item mala-fl">
-						<a href="" class="mala-nav-link">
-							Contact</a>
-					</li>
-					<li class="mala-nav-item mala-fl">
-						<a href="" class="mala-nav-link">
-							Blog</a>
-					</li>
-					<li class="mala-nav-item mala-fl">
-						<a href="" class="mala-nav-link mala-nav-link-lang">
-						</a>
-					</li> -->
 				</ul>
 			</div>
-			<div class="clear"></div>
 		</div>
 	</div>
-
-	<!-- 另外一种粒子 -->
-	<!-- <div id="particles-js">
-					<canvas class="particles-js-canvas-el"></canvas>
-				</div> -->
-
-	<!-- 底部滚动 -->
-	<div class="bottom1">
-		<div>
-			<img src="images/mail.png" class="img_1">
-			<img src="images/whatsapp.png" class="img_1">
-			<img src="images/instagram.png" class="img_1">
-			<img src="images/twitter.png" class="img_1">
-		</div>
-		<div class="img_mouse">
-			<img src="images/mouse.png">
-			<img src="images/keyboard.png" class="img_keyboard">
-		</div>
-	</div>
-	<img src="images/backImg.png" class="cen_back">
-	<!-- back0 -->
-	<div id="lizhi">
-		<div class="title1 lizhi_center">
-			<h4 id="text_0" style="font-size: 36px;">  </h4>
-			<!-- id="ticker" -->
-			<div  class="text">
-				<p id="textp_0" class="text_p" style="font-size: 24px;">
-				</p>
-
+	<div id="footer">
+		<!-- 底部滚动 -->
+		<div class="bottom1">
+			<div class="bottom1_top">
+				<img src="images/twitter.png" class="img_1">
+				<img src="images/DiscordLogo.png" class="img_1">
+				<!-- <img src="images/Medium.png" class="img_1"> -->
+				<!-- <img src="images/instagram.png" class="img_1"> -->
 			</div>
-			<!-- <h4 style="font-size: 36px;"> Collaborative intelligence for the decentralized future.</h4>
-			<div id="ticker" class="text">
-				<p class="text_p" style="font-size: 24px;">
-					‖ Collaborative Intelligence: Decentralized Al co-creation protocol.
-				</p>
+			<div class="img_mouse">
+				<img src="images/mouse.png">
+				<!-- <div>
+				<a class="nextone">Click To Next &nbsp;&nbsp;&nbsp;</a>
 			</div> -->
-		</div>
+				<img src="images/keyboard.png" class="img_keyboard">
+			</div>
 
-		<div class="cent1 lizhi_center">
-			<div id="video_l1" class="video_l1"></div>
-			<div id="video_r1" class="video_r1"></div>
-			<video id="video_cent1" src="./video/C002.mp4" autoPlay="autoplay" muted preload="auto" loop width="100%"
-				height="920px">
-				<source autoplay src="./video/C002.mp4" type="video/mp4">
-				<video>
 		</div>
-
 	</div>
-	<!-- 导航结束 -->
-	<div class="box">
-		<!-- <div id="lizhi"></div> -->
-		<div id="dowebok">
-			<!-- back1 -->
-			<div class="section back1">
-				<div class="title2">
-					<div class="text">
-						<div>
-							<h4 id="text_1"> </h4>
-							<p id="textp_1" class="text_p">
-
-							</p>
-							<!-- <div id="slogan" data-text="CCustomize your ideal Al beings."></div> -->
-						</div>
-					</div>
-
+	<div id="lizhi" class="li_bac"></div>
+	<div id="fullpage">
+		<!-- page-1 -->
+		<div class="section back" id="section0">
+				<canvas id="canvas"></canvas>
+				<div id="home_cent" class="home_cent">
+					<h4> Easier Process, Better Creation.</h4>
+					<p id="ticker" style=" font-size: 24px;">
+						<i class="left-border"></i> URS.Al, the only platform you need to create <span
+							style="font-size: 26px;font-weight: 600;">Al characters that are truly YOURS.</span>
+					</p>
 				</div>
-				<div class="cent1 video_cen2">
-					<div id="video_l2" class="video_l1"></div>
-					<div id="video_r2" class="video_r1"></div>
-					<video id="video_cent2"   autoPlay="autoplay" muted preload="auto" loop width="100%" height="920px">
-						<source autoplay   type="video/mp4">
+			
+			<!-- <canvas id="fire"></canvas> -->
+		</div>
+		<!-- page-2 -->
+		<div class="section back0" id="section1">
+			
+			<div class="back0_cent">
+				<div class="title1 ">
+					<h4 id="text_0" class="title1_tit"> Your creativity, our protocol, <br> limitless possibilities.
+					</h4>
+					<p id="textp_0" class="title1_in">
+						<i class="left-border"></i> Yours Protocol streamlines
+						Al Character creation through a <span style="font-weight: 600;color:#3BF3FF">collaborative
+							approach</span>, making it
+						easier than ever to bring your
+						characters to life
+					</p>
+				</div>
+
+				<div class="cent1 lizhi_center">
+					<video id="video_cent1" autoPlay="autoplay" class="video_cent" src="./video/B001.webm" muted
+						preload="auto" loop width="100%" height="600px">
+						<source autoplay type="video/webm">
 						<video>
 				</div>
+				<div class="video_interact" id="video_interact">
+					Click to interact
+				</div>
 			</div>
 
-			<!-- back2 -->
-			<div class="section back2">
-				<div class="title_r">
-					<!-- <h3 class="y-ain"></h3> -->
-					<div class="text">
-						<h4 id="text_2"></h4>
-						<p id="textp_2">
-
+		</div>
+		<!-- page-3 -->
+		<div class="section back1" id="section2">
+			
+			<div class="back1_cent ">
+				<div class="cent_box2">
+					<div class="cent_2 cent_2_l">
+						<h4 class="cent_2_tit">YOUR Creation with <br> <span
+								style="font-size: 22px;font-weight: 600;font-family: DINFont_BO;color: #3BF3FF;">Total
+								Flexibility and Autonomy</span> </h4>
+						<p class="cent_2_p" style="padding-left: 60px;">
+							Users can set: basic traits, self-awareness, conversation logic, worldview, and more <br>
+							All settings for YOUR AI Characters will be <br> published onchain to ensure nothing is lost
+						</p>
+					</div>
+					<div class="cent_2 cent_2_r" style="right:8%">
+						<h4 class="cent_2_tit">Benefit from collective <br> <span
+								style="font-size: 24px;font-weight: 600;font-family: DINFont_BO;color: #3BF3FF;"> UGI
+								(User Generated
+								Intelligencel)</span></h4>
+						<p class="cent_2_p">
+							With everything put on-chain, Yours Protocol enales trustless and permissionless tailoring
+							of prompts
+							<br>
+							Community-built ecosystem brings AI Characters to life with richer and more nuanced
+							personalities
 						</p>
 					</div>
 				</div>
-				<div class="cent_r video_cen3">
-					<div id="video_l3" class="video_l1"></div>
-					<div id="video_r3" class="video_r1"></div>
-					<video id="video_cent3"   autoPlay="autoplay" muted preload="auto" loop
-						width="100%" height="920px">
-						<source autoplay type="video/mp4">
+				<div class="cent_2_v_box">
+					<video id="video_cent_2" class="cent_2_video" src='./video/C002.webm' autoPlay="autoplay" muted
+						preload="auto" loop width="100%" height="700px">
+						<source autoplay type="video/webm">
 						<video>
 				</div>
+				<div class="video_interact_2 " id="video_interact_2">
+					Click to interact
+				</div>
 
 			</div>
-			<!-- back3  about us-->
-			<div class="section back3">
-				<div class="title_us">
-					<h4>Incubated by Binance Labs</h4>
+
+
+		</div>
+		<!-- page-4 -->
+		<div class="section back2" id="section3">
+			<div class="video_cen3">
+				<video id="video_cent_3" src='./video/A001.webm' autoPlay="autoplay" muted preload="auto" loop
+					width="700px">
+					<source autoplay type="video/webm">
+					<video>
+			</div>
+			<div class="video_interact_3 " id="video_interact_3">
+				Click to interact
+			</div>
+			<div class="title3">
+
+				<h4 id="text_1" class="title3_tit">Everlasting Stability</h4>
+				<p id="textp_1" class="title3_in">
+					<i class="left-border"></i> Imagine creating something that will <span
+						style="font-weight: 600;font-family: DINFont_BO;color: #3BF3FF;">last forever.</span>
+					On-chain protocols offer that possibility for YOUR AI characters to stand the test of time and
+					always evolving
+				</p>
+				<h4 class=" title3_tit_2">Easy Tailoring</h4>
+				<p class=" title3_in_2">
+					<i class="left-border"></i> Making YOUR perfect AI character <span
+						style="font-weight: 600;font-family: DINFont_BO;color: #3BF3FF;"> has never been easier! </span>
+					Directly chat with others' characters OR easily build upon them to create one that fits YOUR exact
+					needs
+				</p>
+			</div>
+		</div>
+		<!-- page-4 -->
+		<div class="section back3" id="section4">
+			<canvas id="canvas_3"></canvas>
+			
+			<div class="title4">
+				<h4 id="text_4" class="title4_tit">Alone we can do so little, together we can do so much.</h4>
+				<p id="textp_4" class="title4_in">
+					Join the first <span style="font-weight: 600;font-family: DINFont_BO;color: #3BF3FF;">
+						community-driven </span> <br> UGI ecosystem today to unlock new
+					possibilities with YOUR AIcharacters.
+				</p>
+				<div class="text_4_but ">
+					Be the first to experience our MVP - Join Our Community TODAY! 
+				</div>
+			</div>
+		</div>
+		<!-- page-4 -->
+		<!-- <div class="section" id="section1">
+			<div class="slide" id="slide1">
+				<div class="intro">
+					<h1>How to do it</h1>
 					<p>
-						Our team consists of experts whoare passionate about exploring the infinite possibilities of Al
-						beings anshaping the future of Al with user-generated intelligence.
+						You will need to place your header and footer outside the plugin's wrapper.
+						This way it won't move on scrolling. Take a look at the source code of this page.
 					</p>
 				</div>
-				<div class="center_us">
-					<div class="center_us_cen">
-						<img src="images/team/John.png">
-						<div class="center_us_r">
-							<h4>John-CEO</h4>
-							<ul>
-								<li>Former founder of an AI unicorn</li>
-								<li>Previously worked at Stanford Cryptography Laboratory and SenseTime (CEO's Office)</li>
-							</ul>
-						</div>
-					</div>
-					<div class="center_us_cen">
-						<img src="images/team/Alice.png">
-						<div class="center_us_r">
-							<h4>Alice – Growth Lead</h4>
-							<ul>
-								<li>Harvard Business School deferred MBA
-									
-									</li>
-								<li>Former Product Manager at Alibaba Group</li>
-							</ul>
-							
-						</div>
-					</div>
-					<div class="center_us_cen">
-						<img src="images/team/Edwawrd.png">
-						<div class="center_us_r">
-							<h4>Edward – Algorithm Engineer Lead</h4>
-							<ul>
-								<li>Former Technical Expert for Video Recommendations on iQiyi homepage
-								</li>
-								<li>Former Architecture/Core Team Leader for the JD Intelligent Robot project
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="center_us_cen">
-						<img src="images/team/Kelvin.png">
-						<div class="center_us_r">
-							<h4>Kelvin – CTO</h4>
-							<ul>
-								<li>Postdoctoral fellow at Tsinghua University, specializing in multimodal perception and understanding.
-								</li>
-								<li>Previous research experience at Microsoft Research, Tencent AI, and Intel Labs.
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="center_us_cen">
-						<img src="images/team/Yumi.png">
-						<div class="center_us_r">
-							<h4>Yumi – NLP Lead</h4>
-							<ul>
-								<li>PDoctor of AI Chatbot Architecture Design from Johns Hopkins University
-								</li>
-								<li>Previous research experience at Microsoft Research and Amazon Alexa AI
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="center_us_cen">
-						<img src="images/team/Friday.png">
-						<div class="center_us_r">
-							<h4>Friday– COO		</h4>
-							<ul>
-								<li>Johns Hopinks Master of Science
-								</li>
-								<li>FormerManagement Trainee at TAL, Project Director at Jicheng
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="center_us_cen">
-						<img src="images/team/Grey.png">
-						<div class="center_us_r">
-							<h4>Grey – Web3 ENG Lead
-							</h4>
-							<ul>
-								<li>Designed a decentralized storage architecture, in 2018
-								</li>
-								<li>zero-knowledge proof and on-chain AI enthusiast
-								</li>
-								<li>Former cloud architecture engineer at Microsoft.
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="center_us_cen">
-						<img src="images/team/Kael.png">
-						<div class="center_us_r">
-							<h4>Kael – Product Lead
-							</h4>
-							<ul>
-								<li>Master of Psychology at Peking University
-								</li>
-								<li>Former Senior Product Manager at Lingxin Intelligent Technology Co., Ltd.
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="center_us_cen">
-						<img src="images/team/Victor.png">
-						<div class="center_us_r">
-							<h4>Victor– UX Lead
-
-							</h4>
-							<ul>
-								<li>Former Growth Design Lead at Soul
-								</li>
-							</ul>
-						</div>
-					</div>
-					
-				</div>
 			</div>
-			<!-- 占位i -->
-			<div class="section back4"></div>
-		</div>
+
+			<div class="slide" id="slide2">
+				<h1>Slide 2</h1>
+				<img src="imgs/iphone-blue.png" alt="iphone" id="iphone-two" />
+			</div> 
+		</div> -->
 	</div>
 
+	<script type="text/javascript" src="js/fullpage.js"></script>
+	<script type="text/javascript" src="js/examples.js"></script>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+
+
+
+	<!-- home -->
+	<script type="module" src="js/home_script.js"></script>
+	<script type="" src="js/home_scrollReveal.js"></script>
+	<!-- home end -->
+
+
+	<!-- <script src="js/liji-bac.js"></script> -->
+	<!-- lizi -->
+
+	<script src='js/three.min.js'></script>
+	<script src="js/script.js"></script>
+
+	<!-- lizi-end -->
+
+	<script type="text/javascript">
+		// var myFullpage = new fullpage('#fullpage', {
+		// 	anchors: ['firstPage', 'secondPage', '3rdPage'],
+		// 	// sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+		// 	css3: true
+		// });
+
+		$(document).ready(function () {
+			setTimeout(() => {
+				console.log('11111111 :>> ', 11111111);
+				$('.home_cent').removeClass('home_cent_ach');
+				$('.home_cent').toggleClass('home_cent_ac');
+			}, 3000);
+		});
+
+	</script>
 
 </body>
-
-<script>
-
-
-
-
-	function videoDomMouse(item, item_l, item_r) {
-		$(item_l).mouseover(function (e) {
-			item.playbackRate = 4
-
-		})
-		$(item_l).mouseleave(function (e) {
-			item.playbackRate = 1
-
-		})
-
-		function windBackward() {
-			if (item.currentTime <= 1 / 12) {
-				clearInterval(intervalBwd);
-			} else {
-				item.currentTime -= 1 / 12;
-			}
-		}
-		$(item_r).mouseover(function (e) {
-			// item.playbackRate = -4
-			item.pause();
-			intervalBwd = setInterval(windBackward, 10);
-
-		})
-		$(item_r).mouseleave(function (e) {
-			clearInterval(intervalBwd);
-			item.play();
-
-		})
-	}
-
-	// 处理区域鼠标滚动-video_l1
-	$(document).ready(function () {
-		var video_1 = document.getElementById("video_cent1");
-		var video_2 = document.getElementById("video_cent2");
-		var video_3 = document.getElementById("video_cent3");
-
-		videoDomMouse(video_1, "#video_r1", "#video_l1")
-		videoDomMouse(video_2, "#video_r2", "#video_l2")
-		videoDomMouse(video_3, "#video_r3", "#video_l3")
-
-	});
-
-
-	// 打字
-	// $(function () {
-	// 	$("#textp_0").ticker({
-	// 		cursorList: " ",
-	// 		rate: 20,
-	// 		delay: 1000,
-	// 	}).trigger("play").trigger("stop");
-	// });
-
-
-
-</script>
-
-<!-- 字体效果 -->
-<script src="js/fonts_anim.js"></script>
-
-
-<!-- 打字机效果 -->
-<script type="text/javascript" src="js/jticker_split.js"></script>
-
-<!-- home -->
-<script type="module" src="js/home_script.js"></script>
-<script type="" src="js/home_scrollReveal.js"></script>
-<!-- home end -->
-<script src="js/lizi.js"></script>
-<script src='js/three.min.js'></script>
-<script src="js/script.js"></script>
 
 </html>

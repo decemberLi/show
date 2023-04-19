@@ -92,13 +92,15 @@ galaxyGeometry.setAttribute(
 
 
 
-const innColor = new Color("#f40")
-const outColor = new Color("#a7f")
+// const innColor = new Color("#000")
+// const outColor = new Color("#000")
+ const innColor = new Color("#f40")
+ const outColor = new Color("#a7f")
 
 const galaxyMaterial = new RawShaderMaterial({
 
   uniforms: {
-    uTime: { value: 0 },
+    uTime: { value: 2 },
     uSize: { value: renderer.getPixelRatio() },
     uBranches: { value: 2 },
     uRadius: { value: 0 },

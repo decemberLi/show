@@ -27,7 +27,7 @@ var pJS = function(tag_id, params) {
                 }
             },
             color: {
-                value: '#fff'
+                value: '#3ef'
             },
             shape: {
                 type: 'circle',
@@ -67,12 +67,12 @@ var pJS = function(tag_id, params) {
             line_linked: {
                 enable: true,
                 distance: 100,
-                color: '#fff',
+                color: '#3ef',
                 opacity: 1,
                 width: 1
             },
             move: {
-                enable: true,
+                enable: false,
                 speed: 2,
                 direction: 'none',
                 random: false,
@@ -91,14 +91,14 @@ var pJS = function(tag_id, params) {
             detect_on: 'canvas',
             events: {
                 onhover: {
-                    enable: true,
+                    enable: false,
                     mode: 'grab'
                 },
                 onclick: {
-                    enable: true,
+                    enable: false,
                     mode: 'push'
                 },
-                resize: true
+                resize: false
             },
             modes: {
                 grab: {
@@ -1578,14 +1578,14 @@ particlesJS('particles-js',
             },
             //交点的颜色
             "color": {
-                "value": "#ffffff"
+                "value": "#3ef"
             },
             //别动就对了-——
             "shape": {
                 "type": "circle",
                 "stroke": {
                     "width": 0,
-                    "color": "#ffffff"
+                    "color": "#3ef"
                 },
                 "polygon": {
                     "nb_sides": 5
@@ -1625,7 +1625,7 @@ particlesJS('particles-js',
                 //距离内连线
                 "color": "#ffffff",
                 "opacity": 0.4,
-                "width": 1
+                "width": 10
             },
             //移动属性
             "move": {
@@ -1649,28 +1649,28 @@ particlesJS('particles-js',
             "events": {
                 //鼠标滑过 和 鼠标点击 属性模式 //true表示开启 false 关闭
                 "onhover": {
-                    "enable": true,
+                    "enable": false,
                     "mode": "grab"
                 },
                 "onclick": {
-                    "enable": true,
+                    "enable": false,
                     "mode": "push"
                 },
-                "resize": true
+                "resize": false
             },
             //各种模式属性 把属性名替换 两个状态的 "mode": 即可1653/1657附近 "grab" "bubble" "repulse" "push" "remove"
             //下面是鼠标事件名称
             "modes": {
                 //鼠标与distance范围内点连线
                 "grab": {
-                    "distance": 100,
+                    "distance": 0,
                     "line_linked": {
                         "opacity": 1
                     }
                 },
                 //改变周围点相应属性
                 "bubble": {
-                    "distance": 100,
+                    "distance": 0,
                     "size": 10,
                     "duration": 2,
                     "opacity": 8,
@@ -1678,7 +1678,7 @@ particlesJS('particles-js',
                 },
                 //鼠标周围distance范围排斥
                 "repulse": {
-                    "distance": 100
+                    "distance": 0
                 },
                 //添加 或 删除点de数量
                 "push": {
@@ -1689,7 +1689,7 @@ particlesJS('particles-js',
                 }
             }
         },
-        "retina_detect": true,
+        "retina_detect": false,
     }
 
 );
