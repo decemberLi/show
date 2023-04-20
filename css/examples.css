@@ -804,7 +804,7 @@ abbr,acronym { border: 0;
 .video_cen3{
     position: absolute;
     left: 2%;
-    top: -20%;
+    top: -4%;
     transform: translate(0%, -12%);
 }
 
@@ -815,23 +815,23 @@ abbr,acronym { border: 0;
 
 
 .video_cen3_ac {
-    animation: video_cen3_ac 2s cubic-bezier(0.25, 0.67, 0.63, 0.68) 1 forwards;;
+    animation: video_cen3_ac 0.5s cubic-bezier(0.25, 0.67, 0.63, 0.68) 1 forwards;;
 }
 
 .video_cen3_ach {
-    animation: video_cen3_ach 2s cubic-bezier(0.25, 0.67, 0.63, 0.68) 1 forwards;;
+    animation: video_cen3_ach 0.5s cubic-bezier(0.25, 0.67, 0.63, 0.68) 1 forwards;;
 }
 
 @keyframes video_cen3_ac {
     0% {
         opacity: 0;
-        transform: scale(1);
+        /* transform: scale(1); */
         /* top: 220px; */
     }
 
     100% {
         opacity: 1;
-        transform: scale(1.1);
+        /* transform: scale(1.1); */
         /* top: 120px; */
     }
 }
@@ -839,13 +839,13 @@ abbr,acronym { border: 0;
 @keyframes video_cen3_ach {
     0% {
         opacity:1;
-        transform: scale(1.1);
+        /* transform: scale(1.1); */
         /* top: 120px; */
     }
 
     100% {
         opacity: 0;
-        transform: scale(1);
+        /* transform: scale(1); */
         /* top: 220px; */
     }
 }
@@ -853,7 +853,7 @@ abbr,acronym { border: 0;
 
 .title3 {
     position: absolute; 
-   top: 13%;
+   top: 15%;
    right: 6%;
     color: #fff;
     z-index: 99;
@@ -1373,7 +1373,7 @@ abbr,acronym { border: 0;
         min-width: 90%;
     }
     .video_cen3{
-        top:-20%;
+        top:-10%;
         left: -2%;
     }
 }
@@ -1397,7 +1397,7 @@ abbr,acronym { border: 0;
         min-width: 92%;
     }
     .video_cen3{
-        top:-17%;
+        top:-2%;
         left: -2%;
     }
 }
@@ -1421,7 +1421,7 @@ abbr,acronym { border: 0;
         min-width: 97%;
     }
     .video_cen3{
-        top:-16%;
+        top:1%;
         left:4%
     }
     .cent1{
@@ -1452,7 +1452,7 @@ abbr,acronym { border: 0;
         min-width: 100%;
     }
     .video_cen3{
-        top:-10%;
+        top:0%;
         left:8%
     }
     .cent1{

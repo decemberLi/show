@@ -41,29 +41,33 @@
 				$('.video_interact').css({
 					"opacity": 1
 				});
+				var video_1 = document.getElementById('video_cent1');
+
+				video_1.play();
 				// 第一屏切换视频
 				$('.video_interact').click(function () {
 					$('.cent1').removeClass('cent1_ac');
 					$('.cent1').removeClass('cent1_ach');
 					$('.cent1').removeClass('cent1_v_ac');
 					$('.cent1').toggleClass('cent1_v_ach');
-					var video_1 = document.getElementById('video_cent1');
 					var index_v_vv = Number(window.localStorage.getItem("index_v_1"))
 					var vList1 = [
-						'./video/B001.webm',
-						'./video/B002.webm',
-						'./video/B003.webm',
+						'./video/B002.mp4',
+						'./video/B001.mp4',
+						'./video/B003.mp4',
+						// 'https://51n5i76561.yicp.fun/MP4/2/B0001-0248.mp4',
+						// 'https://51n5i76561.yicp.fun/MP4/2/A0001-0248.mp4',
+						// 'https://51n5i76561.yicp.fun/MP4/2/C0001-0248.mp4',
 					]; // 初始化播放列表，这里的url要用相对路径
-					var vList1_one = vList1[index_v_vv != null ? index_v_vv : 0];
+					var vList1_one = vList1[index_v_vv != null ? index_v_vv : 1];
 					console.log(index_v_vv, '11111化播放列表 :>> ', vList1_one);
 					video_1.src = vList1_one;
-					video_1.load();
-
-
+					$('.cent1').removeClass('cent1_v_ach');
+					$('.cent1').toggleClass('cent1_v_ac');
+					
 					setTimeout(() => {
-						$('.cent1').toggleClass('cent1_v_ac');
-						$('.cent1').removeClass('cent1_v_ach');
-						video_1.play();
+						// video_1.load();
+						// video_1.play();
 					}, 1000);
 					window.localStorage.setItem("index_v_1", index_v_vv != null && (index_v_vv) < vList1.length - 1 ? index_v_vv + 1 : 0)
 				});
@@ -80,12 +84,15 @@
 				$('.video_interact_2').toggleClass('video_interact_ac');
 
 				var vList2 = [
-					'./video/C002.webm',
-					'./video/C003.webm',
+					'./video/C003.mp4',
+					'./video/C002.mp4',
+					// 'https://51n5i76561.yicp.fun/MP4/1/A0001-0288.mp4',
+					// 'https://51n5i76561.yicp.fun/MP4/1/B0001-0288.mp4',
 				]; // 初始化播放列表，这里的url要用相对路径
 
 
 				var video_2 = document.getElementById('video_cent_2');
+				video_2.play();
 				// 第2屏切换视频
 				$('.video_interact_2').click(function () {
 					$('.cent_2').removeClass('cent_2_ac');
@@ -100,14 +107,15 @@
 					}, 200);
 
 					var index_v_v2 = Number(window.localStorage.getItem("index_v_2"))
-					var vList1_one = vList2[index_v_v2 != null ? index_v_v2 : 0];
+					var vList1_one = vList2[index_v_v2 != null ? index_v_v2 : 1];
 					video_2.src = vList1_one;
-					video_2.load();
-					video_2.play();
+					
 					window.localStorage.setItem("index_v_2", index_v_v2 != null && (index_v_v2) < vList2.length - 1 ? index_v_v2 + 1 : 0)
 					setTimeout(() => {
 						$('.cent_2_video').removeClass('cent_2_v_ac');
 						$('.cent_2_video').toggleClass('cent_2_v_ach');
+						// video_2.load();
+						// video_2.play();
 					}, 3000);
 					setTimeout(() => {
 						$('.cent_2').removeClass('cent_2_ach');
@@ -142,26 +150,31 @@
 				}, 1600);
 				var video_3 = document.getElementById('video_cent_3');
 				var vList2 = [
-					'./video/A001.webm',
-					'./video/A002.webm',
-					'./video/A003.webm',
+					'./video/A002.mp4',
+					'./video/A001.mp4',
+					'./video/A003.mp4',
+					// 'https://51n5i76561.yicp.fun/MP4/3/B0001-0250.mp4',
+					// 'https://51n5i76561.yicp.fun/MP4/3/A0001-0250.mp4',
+					// 'https://51n5i76561.yicp.fun/MP4/3/C0001-0250.mp4',
 				]; // 初始化播放列表，这里的url要用相对路径
 
-
+				video_3.play();
 				// 第3屏切换视频
 				$('.video_interact_3').click(function () {
 					$('.video_cen3').removeClass('video_cen3_ac');
 					$('.video_cen3').toggleClass('video_cen3_ach');
 					var index_v_vv = Number(window.localStorage.getItem("index_v_3"))
-					var vList1_one = vList2[index_v_vv != null ? index_v_vv : 0];
+					var vList1_one = vList2[index_v_vv != null ? index_v_vv : 1];
 					console.log(index_v_vv, '化播放列表 :>> ', vList1_one);
 					video_3.src = vList1_one;
-					video_3.load();
-					video_3.play();
+					
 					window.localStorage.setItem("index_v_3", index_v_vv != null && (index_v_vv) < 2 ? index_v_vv + 1 : 0)
-					setTimeout(() => {
-						$('.video_cen3').removeClass('video_cen3_ach');
+					$('.video_cen3').removeClass('video_cen3_ach');
 						$('.video_cen3').toggleClass('video_cen3_ac');
+					setTimeout(() => {
+						
+						// video_3.load();
+						// video_3.play();
 					}, 1000);
 
 				});
